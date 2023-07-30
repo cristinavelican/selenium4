@@ -1,0 +1,135 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-06-11T20:06:45.039Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.step_definitions.Hooks.BeforeSteps()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "User fills in personal information and submits feedback",
+        "description": "",
+        "id": "contactus-feature;user-fills-in-personal-information-and-submits-feedback",
+        "after": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "features.step_definitions.Hooks.AfterSteps()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8180000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am on the home page",
+            "match": {
+              "location": "features.step_definitions.BookingSteps.i_am_on_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 558000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I fill in my information",
+            "match": {
+              "location": "features.step_definitions.BookingSteps.i_fill_in_my_information(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Name",
+                  "Email",
+                  "Phone"
+                ]
+              },
+              {
+                "cells": [
+                  "Cristina",
+                  "test@test.com",
+                  "+32487454545"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1710000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I submit my feedback",
+            "match": {
+              "location": "features.step_definitions.ContactUsSteps.i_submit_my_feedback(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Subject",
+                  "Message"
+                ]
+              },
+              {
+                "cells": [
+                  "I want to submit a test message",
+                  "The message I am sending needs to have at least 20 characters"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 765000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I can see the personalized successful message \"Thanks for getting in touch\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Thanks for getting in touch\"",
+                  "offset": 46
+                }
+              ],
+              "location": "features.step_definitions.ContactUsSteps.i_can_see_the_personalized_successful_message(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@contactUs"
+          }
+        ]
+      }
+    ],
+    "name": "ContactUs feature",
+    "description": "  As a user I am able to send my feedback about the application by filling in my information in a form.",
+    "id": "contactus-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/contactUs.feature",
+    "tags": []
+  }
+]
