@@ -9,7 +9,7 @@ public class DriversUtils {
 
     public static void initDriver() {
         System.out.println("Current Working Directory: " + System.getProperty("user.dir"));
-        System.setProperty("webdriver.chrome.driver", "/Drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
         //System.setProperty("webdriver.http.factory", "jdk-http-client");
         chromeDriverInit();
 
