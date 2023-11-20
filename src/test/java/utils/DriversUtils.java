@@ -8,7 +8,7 @@ public class DriversUtils {
     static WebDriver driver;
 
     public static void initDriver() {
-        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
         //System.setProperty("webdriver.http.factory", "jdk-http-client");
         chromeDriverInit();
 
