@@ -27,8 +27,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+    - name: Make Chromedriver Executable
+      run: chmod +x Drivers/chromedriver
     - name: List Contents of Drivers Directory
-      run: ls -R Drivers
+      run: ls -l Drivers
     - name: Build with Maven
       run: mvn clean install -Dtest=RunnerTest test
 
