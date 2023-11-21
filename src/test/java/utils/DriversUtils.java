@@ -8,7 +8,7 @@ public class DriversUtils {
     static WebDriver driver;
 
     public static void initDriver() {
-        System.out.println("Current Working Directory: " + System.getProperty("user.dir"));
+        //System.out.println("Current Working Directory: " + System.getProperty("user.dir"));
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
         //System.setProperty("webdriver.http.factory", "jdk-http-client");
         chromeDriverInit();
@@ -35,7 +35,8 @@ public class DriversUtils {
     public static void chromeDriverInit() {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--remote-allow-origins=*");
-        setCapabilitiesChrome();
+        chromeOptions.addArguments("-headless=new");
+        //setCapabilitiesChrome();
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
     }
@@ -48,6 +49,8 @@ public class DriversUtils {
         chromeOptions.setCapability("visual", true); // To enable step by step screenshot
         chromeOptions.setCapability("video", true); // To enable video recording
         chromeOptions.setCapability("console", true); // To capture console logs
+        chromeOptions.setCapability("headless", true);
+        System.out.println("Desired Caps: " + chromeOptions);
         return chromeOptions;
     }
 }
