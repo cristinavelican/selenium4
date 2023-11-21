@@ -10,8 +10,6 @@ import pages.HomePage;
 
 import java.util.List;
 
-import static utils.DriversUtils.setCapabilitiesChrome;
-
 public class BookingSteps extends BasePage {
 
     HomePage homePage = new HomePage();

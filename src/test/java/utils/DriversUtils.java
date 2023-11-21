@@ -33,23 +33,15 @@ public class DriversUtils {
     }
 
     public static void chromeDriverInit() {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--remote-allow-origins=*");
-        chromeOptions.addArguments("-headless=new");
-        //setCapabilitiesChrome();
+        ChromeOptions chromeOptions = setCapabilitiesChromeHeadless();
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
     }
 
-    public static ChromeOptions setCapabilitiesChrome(){
+    public static ChromeOptions setCapabilitiesChromeHeadless(){
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setCapability("browserName", "chrome");
-        chromeOptions.setCapability("platform", "win10"); // If this cap isn't specified, it will just get any available one
-        chromeOptions.setCapability("network", true); // To enable network logs
-        chromeOptions.setCapability("visual", true); // To enable step by step screenshot
-        chromeOptions.setCapability("video", true); // To enable video recording
-        chromeOptions.setCapability("console", true); // To capture console logs
-        chromeOptions.setCapability("headless", true);
+        chromeOptions.addArguments("--remote-allow-origins=*");
+        chromeOptions.addArguments("-headless=new");
         System.out.println("Desired Caps: " + chromeOptions);
         return chromeOptions;
     }
